@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-app.html">
+<link rel="import" href="../messenger-elements/messenger-login.html">
+
+<dom-module id="messenger-app">
+  <template>
+    <firebase-app 
+    auth-domain="messenger-c5138.firebaseapp.com" 
+    database-url="https://messenger-c5138.firebaseio.com" 
+    api-key="AIzaSyAX2DCEXP8i3e1Hw6BhMmtIIM7mcdZhhmE"
+    >
+      
+    </firebase-app>
+    <style>
+      messenger-login{
+        width: 100%;
+        max-width: 400px;
+        background-color: #ccc;
+        padding: 1em;
+      }
+    </style>
+    
+    <messenger-login></messenger-login>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'messenger-app',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'messenger-app',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
